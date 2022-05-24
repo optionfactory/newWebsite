@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 :root {
+    scroll-behavior: smooth;
     --white: white;
     --accent-color: #ffb731;
     --background-color: #282828;
+    --background-light-color: #3a3a3a;
     /* --background-color: #0e0e3f; */
 }
 
@@ -18,10 +20,18 @@ body {
     background-color: var(--background-color);
 }
 
-h1, p {
+h1, p, a, li {
     color: var(--white);
     font-family: 'Orbitron', sans-serif;
     font-weight: 100;
+}
+
+.material-icons {
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
 }
 
 .header {
@@ -46,6 +56,7 @@ h1.brand {
     grid-row-start: 2;
     margin: auto;    
     width: 100%;
+    max-width: 57vh;
 }
 
 p.intro {
@@ -82,6 +93,49 @@ b.light {
     margin-bottom: 0;
 }
 
+.navbar-container {
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    padding: 10px 0;
+}
+
+.navbar-container .mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-navbar-logo {
+    height: 45px;
+}
+
+.navbar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-light-color);
+    margin: 0;
+    padding: 0 40px;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar.open {
+    left: 0;
+}
+
+ul > li {
+    list-style-type: none;
+    margin: 15px 0;
+}
+
+li.home img {
+    height: 50px;
+}
+
 @media screen and (min-width: 600px) {
 
     .logo {
@@ -101,6 +155,42 @@ b.light {
 
     .archievements > div > .label {
         font-size: 15px
+    }
+
+    .navbar-container .mobile {
+        display: none;
+    }
+
+    .navbar {
+        position: unset;
+        flex-direction: row;
+        background-color: var(--background-color);
+        align-items: center;
+        padding: 0;
+    }
+
+    .navbar > li {
+        margin: auto 15px;
+    }
+
+    li.close-menu-btn {
+        display: none;
+    }
+
+    li.home {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    li.contacts {
+        margin-left: auto;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    li.contacts .material-icons {
+        margin-right: 5px;
     }
 
 }
@@ -126,9 +216,13 @@ b.light {
     }
 
     .archievements {
-        grid-row: 4 / 13;
+        grid-row: 3 / 13;
         grid-column: 8 / 9;
         flex-direction: column;
+    }
+
+    .archievements > div {
+        margin-right: 0;
     }
 
     .archievements > div > .value {

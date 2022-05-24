@@ -6,13 +6,14 @@
     <title>OptionFactory</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="main.js"></script>
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <h1 class="brand">OptionFactory</h1>
         <img class="logo" src="assets/imgs/3Dlogo.png" alt="3D OptionFactory logo">
         <p class="intro">Siamo una società di consulenza informatica e sviluppo software che ha come focus portare alla <b class="light">luce</b> i tuoi progetti,<br> offrendo una visione chiara delle <b class="light">opzioni</b> perseguibili.</p>
-
         <div class="archievements">
             <div class="archievement-1">
                 <p class="value">+08</p>
@@ -27,7 +28,22 @@
                 <p class="label">Clienti soddisfatti</p>
             </div>            
         </div>
+    </div>
+    <div class="navbar-container">
+        <div class="mobile">
+            <span class="open-navbar-btn material-icons">menu</span>
+            <a href="#header"><img class="mobile-navbar-logo" src="assets/imgs/2Dlogo.png" alt="OptionFactory logo"></a>
+        </div>
 
+        <ul class="navbar">
+            <li class="close-menu-btn"><span class="close-navbar-btn material-icons">menu_open</span></li>
+            <li class="home"><a href="#header"><img src="assets/imgs/2Dlogo.png" alt="OptionFactory logo"></a></li>
+            <li>Servizi</li>
+            <li>Team</li>
+            <li>Portfolio</li>
+            <li>Lavora con noi</li>
+            <li class="contacts"><span class="material-icons">mail_outline</span> Contatti</li>
+        </ul>
     </div>
 </body>
 </html>

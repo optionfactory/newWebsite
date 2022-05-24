@@ -6,6 +6,8 @@
     --accent-color: #ffb731;
     --background-color: #282828;
     --background-light-color: #3a3a3a;
+    --opfa-blue: #1e71b8;
+    --dark-text-color: #adadad
     /* --background-color: #0e0e3f; */
 }
 
@@ -49,6 +51,7 @@ h1.brand {
     grid-column: 1 / 9;
     grid-row: 1 / 3;
     margin: auto;
+    text-shadow: 0.1vw 0.1vw 0.2vw var(--opfa-blue);
 }
 
 .logo {
@@ -60,6 +63,7 @@ h1.brand {
 }
 
 p.intro {
+    color: var(--dark-text-color);
     font-size: 15px;
     grid-column: 1 / 9;
     grid-row: 8 / 11;
@@ -80,6 +84,10 @@ b.light {
     text-shadow: 0 0 5px var(--background-color), 0 0 10px var(--background-color);
 }
 
+.archievements p {
+    color: var(--dark-text-color);
+}
+
 .archievements > div {
     margin: auto;
     text-align: center;
@@ -89,8 +97,11 @@ b.light {
 
 .archievements > div > .value {
     font-size: 18px;
-    font-weight: bold;
     margin-bottom: 0;
+}
+
+.archievements > div > .label {
+    margin-top: 0;
 }
 
 .navbar-container {

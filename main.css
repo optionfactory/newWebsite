@@ -1,55 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-html, body {
+:root {
+    --white: white;
+    --accent-color: #ffb731;
+    --background-color: #282828;
+    /* --background-color: #0e0e3f; */
+}
+
+html {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #0e0e3f;
+    margin: 0;
+    padding: 0 7vw;
+    background-color: var(--background-color);
+}
+
+h1, p {
+    color: var(--white);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 100;
 }
 
 .header {
-    height: 100vh;
+    height: max(600px, 100vh);
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: repeat(12, minmax(0, 1fr));
+    flex-wrap: wrap;
 }
 
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 100;
+h1.brand {
     font-size: 6vw;
     letter-spacing: 2vw;
-    color: white;
-    margin: 50px auto 0;
-    height: fit-content;
+    grid-column: 1 / 9;
+    grid-row: 1 / 3;
+    margin: auto;
 }
 
-.header > img {
-    position: absolute;
-    width: 80vw;
-    top: 8vh;
-    left: 20vw;
+.logo {
+    grid-column: 1 / 9;
+    grid-row-start: 2;
+    margin: auto;    
+    width: 100%;
+}
+
+p.intro {
+    font-size: 15px;
+    grid-column: 1 / 9;
+    grid-row: 8 / 11;
+    margin: auto;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    text-shadow: 0 0 5px var(--background-color), 0 0 10px var(--background-color);
+}
+
+b.light {
+    color: var(--accent-color);
+}
+
+.archievements {
+    grid-row: 11 / 13;
+    grid-column: 1 / 9;
+    display: flex;
+    text-shadow: 0 0 5px var(--background-color), 0 0 10px var(--background-color);
+}
+
+.archievements > div {
+    margin: auto;
+    text-align: center;
+    font-size: 11px;
+    max-width: 100px;
+}
+
+.archievements > div > .value {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
 @media screen and (min-width: 600px) {
 
-    .header > img {
-        width: 60vw;
-        top: 5vh;
-        left: 35vw;
+    .logo {
+        grid-column: 4 / 9;
+        grid-row: 3 / 12;
     }
-    
+
+    p.intro {
+        font-size: 15px;
+        grid-column: 1 / 5;
+        grid-row: 7 / 11;
+    }
+
+    .archievements > div > .value {
+        font-size: 23px;
+    }
+
+    .archievements > div > .label {
+        font-size: 15px
+    }
+
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1300px) {
 
-    .header > img {
-        top: 2vh;
-        left: unset;
-        height: 100vh;
-        width: unset;
-        right: 5vw;
+    h1.brand {
+        grid-row: 1 / 4;
+    }
+
+    .header {
+        height: max(600px, calc(100vh - 100px));
+    }
+
+    .logo {
+        grid-column: 4 / 8;
+        grid-row: 3 / 12;
+    }
+
+    p.intro {
+        font-size: 20px;
+        grid-column: 1 / 4;
+    }
+
+    .archievements {
+        grid-row: 4 / 13;
+        grid-column: 8 / 9;
+        flex-direction: column;
+    }
+
+    .archievements > div > .value {
+        font-size: 27px;
     }
 
 }

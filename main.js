@@ -8,15 +8,16 @@ const ready = (callback) => {
 
 ready(() => {
 
-    let navbarOpen = false;
-
     const navbar = document.querySelector('.navbar');
 
-    document.querySelector('.open-navbar-btn').onclick = () => {
+    document.querySelector('.open-navbar-btn').onclick = (event) => {
+        event.stopPropagation();
         navbar.classList.add('open');
     }
 
-    document.querySelector('.navbar').onclick = () => {
-        navbar.classList.remove('open');
+    document.querySelector(':not(.open-navbar-btn)') .onclick = () => {
+        if (navbar.classList.contains('open')) {
+            navbar.classList.remove('open');
+        }
     }
 });

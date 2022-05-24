@@ -4,8 +4,8 @@
     scroll-behavior: smooth;
     --white: white;
     --accent-color: #ffb731;
-    --background-color: #282828;
-    --background-light-color: #3a3a3a;
+    --background-color: #081c2e;
+    --background-light-color: #0f3150;
     --opfa-blue: #1e71b8;
     --dark-text-color: #adadad
     /* --background-color: #0e0e3f; */
@@ -46,7 +46,7 @@ a {
 }
 
 h1.brand {
-    font-size: 6vw;
+    font-size: min(80px, 6vw);
     letter-spacing: 2vw;
     grid-column: 1 / 9;
     grid-row: 1 / 3;

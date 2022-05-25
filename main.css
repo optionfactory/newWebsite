@@ -53,6 +53,13 @@ div[class$="-section"] {
     margin-top: var(--section-gap-mobile);
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -90px;
+    visibility: hidden;
+}
+
 .header {
     height: max(600px, 100vh);
     position: relative;

@@ -306,6 +306,16 @@ li.contacts .material-icons {
     font-size: 11px;
 }
 
+.footer-section {
+    text-align: center;
+    padding: 15px;
+}
+
+.footer-section p {
+    color: var(--dark-text-color);
+    font-size: 10px;
+}
+
 @media screen and (min-width: 600px) {
 
     h2 {
@@ -382,6 +392,10 @@ li.contacts .material-icons {
         font-size: 11px;
     }
 
+    .footer-section {
+        padding: 30px;
+    }
+    
 }
 
 @media screen and (min-width: 1300px) {

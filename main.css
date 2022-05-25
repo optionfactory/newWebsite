@@ -7,8 +7,9 @@
     --background-color: #081c2e;
     --background-light-color: #0f3150;
     --opfa-blue: #1e71b8;
-    --dark-text-color: #adadad
-    /* --background-color: #0e0e3f; */
+    --dark-text-color: #adadad; 
+    --section-gap-mobile: 30px;
+    --section-gap-desktop: 90px;
 }
 
 html {
@@ -23,7 +24,7 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, p, a, li {
+h1, h2, h3, p, a, li {
     color: var(--white);
     font-family: 'Orbitron', sans-serif;
     font-weight: 100;
@@ -34,12 +35,22 @@ h2 {
     font-size: min(45px, 5vw);
 }
 
+h3 {
+    text-align: center;
+    color: var(--dark-text-color);
+    font-size: min(17px, 3.5vw);
+}
+
 .material-icons {
     color: var(--white);
 }
 
 a {
     text-decoration: none;
+}
+
+div[class$="-section"] {
+    margin-top: var(--section-gap-mobile);
 }
 
 .header {
@@ -201,7 +212,44 @@ li.contacts .material-icons {
     font-size: 12vw;
 }
 
+.team-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.team-stats .stat {
+    text-align: center;
+    aspect-ratio: 1;
+    width: 100%;
+    max-width: 150px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-stats .stat p {
+    margin: 0 auto;
+}
+
+.team-stats .stat p:last-child {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
 @media screen and (min-width: 600px) {
+
+    h2 {
+        margin-bottom: 0;
+        letter-spacing: 3pt;
+    }
+
+    h3 {
+        margin-bottom: 45px;
+        letter-spacing: 1pt;
+    }
 
     .logo {
         grid-column: 4 / 9;
@@ -244,12 +292,28 @@ li.contacts .material-icons {
         font-size: 12px;
     }
 
+    .team-stats {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
 }
 
 @media screen and (min-width: 1300px) {
 
+    div[class$="-section"] {
+        margin-top: var(--section-gap-desktop);
+    }
+
     h1.brand {
         grid-row: 1 / 4;
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    h3 {
+        margin-bottom: var(--section-gap-desktop);
     }
 
     .header {
@@ -280,6 +344,10 @@ li.contacts .material-icons {
         font-size: 27px;
     }
 
+    .navbar-container {
+        margin-bottom: -30px;
+    }
+
     .navbar-container .mobile {
         display: none;
     }
@@ -305,10 +373,6 @@ li.contacts .material-icons {
         margin-left: auto;
     }
 
-    .services-section h2 {
-        margin-bottom: 90px;
-    }
-
     .services > div > .material-icons {
         font-size: 60px;
     }
@@ -319,6 +383,18 @@ li.contacts .material-icons {
 
     .services p.clients {
         font-size: 16px;
+    }
+
+    .team-section h3 {
+        margin-bottom: 40px;
+    }
+
+    .team-stats .stat p:first-child {
+        font-size: 19px;
+    }
+
+    .team-stats .stat p:last-child {
+        font-size: 17px;
     }
 
 }

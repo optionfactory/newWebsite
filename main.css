@@ -20,6 +20,7 @@ body {
     margin: 0;
     padding: 0 7vw;
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 h1, h2, p, a, li {
@@ -221,36 +222,6 @@ li.contacts .material-icons {
         font-size: 15px
     }
 
-    .navbar-container .mobile {
-        display: none;
-    }
-
-    .navbar {
-        position: unset;
-        flex-direction: row;
-        background-color: var(--background-color);
-        align-items: center;
-        padding: 0;
-    }
-
-    .navbar > li {
-        margin: auto 15px;
-    }
-
-    li.close-menu-btn {
-        display: none;
-    }
-
-    li.home {
-        margin-left: 0;
-        margin-right: auto;
-    }
-
-    li.contacts {
-        margin-left: auto;
-        margin-right: 0;
-    }
-
     .services {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 7vw;
@@ -307,6 +278,31 @@ li.contacts .material-icons {
 
     .archievements > div > .value {
         font-size: 27px;
+    }
+
+    .navbar-container .mobile {
+        display: none;
+    }
+
+    .navbar {
+        position: unset;
+        background-color: var(--background-color);
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr repeat(4, fit-content(1px)) 1fr;
+        column-gap: 30px;
+    }
+
+    li.close-menu-btn {
+        display: none;
+    }
+
+    .navbar > li {
+        margin: auto 0;
+    }
+
+    li.contacts {
+        margin-left: auto;
     }
 
     .services-section h2 {

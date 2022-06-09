@@ -562,4 +562,8 @@ div.project > * {
         font-size: 17px;
     }
 
+    div.project {
+        column-gap: 50px;
+    }
+
 }

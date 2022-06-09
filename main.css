@@ -41,7 +41,7 @@ h3 {
     font-size: min(17px, 3.5vw);
 }
 
-.material-icons {
+.material-symbols-outlined {
     color: var(--white);
 }
 
@@ -176,7 +176,7 @@ li.contacts {
     align-items: center;
 }
 
-li.contacts .material-icons {
+li.contacts .material-symbols-outlined {
     margin-right: 5px;
 }
 
@@ -221,7 +221,7 @@ li.contacts .material-icons {
     font-size: 20px;
 }
 
-.services > div > .material-icons {
+.services > div > .material-symbols-outlined {
     font-size: 12vw;
 }
 
@@ -251,6 +251,48 @@ li.contacts .material-icons {
     margin-top: 10px;
     font-size: 15px;
 }
+
+div.project {
+    display: grid;
+}
+
+div.project ~ div.project {
+    margin-top: var(--section-gap-mobile);
+}
+
+div.project > * {
+    width: 100%;
+}
+
+.project-description-container {
+    text-align: center;
+}
+
+.project-name {
+    font-size: 17px;
+    letter-spacing: 1pt;
+    font-weight: bold;
+}
+
+.project-description {
+    color: var(--dark-text-color);
+}
+
+.project-details-btn {
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    margin: var(--section-gap-mobile) auto;
+    padding: 5px 18px;
+}
+
+.project-details-btn span.material-symbols-outlined {
+    color: var(--accent-color);
+}
+ 
+
 
 .testimonial {
     display: grid;
@@ -357,7 +399,7 @@ li.contacts .material-icons {
         padding: 13%;
     }
 
-    .services > div > .material-icons {
+    .services > div > .material-symbols-outlined {
         font-size: 35px;
     }
 
@@ -371,6 +413,10 @@ li.contacts .material-icons {
 
     .team-stats {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .testimonial {
+        margin-top: calc(2 * var(--section-gap-desktop));
     }
 
     .testimonial .content {
@@ -396,6 +442,25 @@ li.contacts .material-icons {
         padding: 30px;
     }
     
+}
+
+@media screen and (min-width: 900px) {
+
+    div.project {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+        column-gap: 15px;
+        margin-top: var(--section-gap-desktop);
+    }
+
+    div.project ~ div.project {
+        margin-top: var(--section-gap-desktop);
+    }
+
+    div.project.invert .project-description-container {
+        order: -1;
+    }
+
 }
 
 @media screen and (min-width: 1300px) {
@@ -473,7 +538,7 @@ li.contacts .material-icons {
         margin-left: auto;
     }
 
-    .services > div > .material-icons {
+    .services > div > .material-symbols-outlined {
         font-size: 60px;
     }
 

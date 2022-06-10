@@ -154,8 +154,9 @@ b.light {
     flex-direction: column;
     background-color: var(--background-light-color);
     margin: 0;
-    padding: 0 40px;
+    padding: 20px 40px 0;
     transition: 0.5s ease-in-out;
+    opacity: 0.98;
 }
 
 .navbar.open {
@@ -167,17 +168,44 @@ ul > li {
     margin: 15px 0;
 }
 
+ul > li:not(.home) {
+    margin: 0;
+}
+
+ul.navbar a {
+    display: block;
+}
+
+ul > li:not(.home) a {
+    padding: 15px 0;
+}
+
 li.home img {
     height: 50px;
 }
 
-li.contacts {
+ul > li.contacts {
     display: flex;
     align-items: center;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    margin-top: 15px;
 }
 
 li.contacts .material-symbols-outlined {
     margin-right: 5px;
+    color: var(--accent-color);
+    font-weight: 200;
+}
+
+ul > li.contacts a {
+    display: flex;
+    padding: 7px 13px;
+}
+
+li.contacts p {
+    margin: auto;
 }
 
 .main-content {
@@ -534,8 +562,10 @@ div.project > * {
         margin: auto 0;
     }
 
-    li.contacts {
-        margin-left: auto;
+    ul > li.contacts {
+        margin: auto;
+        margin-right: 0;
+        height: fit-content;
     }
 
     .services > div > .material-symbols-outlined {

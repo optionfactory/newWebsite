@@ -84,6 +84,47 @@ h1.brand {
     margin: auto;    
     width: 100%;
     max-width: 57vh;
+    animation: light-on 5s linear;
+}
+
+@keyframes light-on {
+    0% {
+        opacity: 0.1;
+    }
+
+	19.999%, 22% {
+		opacity: 0.5;
+	}
+
+    62.999%, 64%, 64.999%, 70% {
+		opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+}
+
+.flicker-slow{
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast{
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		opacity: 1;
+	}
+
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
 }
 
 p.intro {
@@ -131,7 +172,6 @@ b.light {
 .navbar-container {
     position: sticky;
     top: 0;
-    background-color: var(--background-color);
     padding: 10px 0;
 }
 
@@ -571,7 +611,7 @@ div.testimonials-section {
     }
 
     .logo {
-        grid-column: 4 / 8;
+        grid-column: 4 / 9;
         grid-row: 3 / 12;
     }
 
@@ -604,7 +644,7 @@ div.testimonials-section {
 
     .navbar {
         position: unset;
-        background-color: var(--background-color);
+        background: transparent;
         padding: 0;
         display: grid;
         grid-template-columns: 1fr repeat(4, fit-content(1px)) 1fr;

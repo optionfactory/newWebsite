@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 :root {
     scroll-behavior: smooth;
@@ -76,6 +77,18 @@ h1.brand {
     grid-row: 1 / 3;
     margin: auto;
     text-shadow: 0.1vw 0.1vw 0.2vw var(--opfa-blue);
+    font-family: 'Monoton', cursive;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-shadow: 1px 0px 4px var(--opfa-blue),
+                    2px 0px 4px var(--opfa-blue),
+                    3px 0px 4px var(--opfa-blue),
+                    2px 0px 3px var(--background-light-color),
+                    2px 3px 15px var(--background-light-color),
+                    2px 0px 15px,
+                    5px 0px 125px,
+                    20px 0vw 200px var(--opfa-blue),
+                    40px 0vw 200px var(--background-light-color);
 }
 
 .logo {
@@ -88,33 +101,27 @@ h1.brand {
 }
 
 @keyframes light-on {
-    0% {
-        opacity: 0.1;
-    }
+    0% { opacity: 0.1; }
+	19.999%, 22% { opacity: 0.5; }
+    62.999%, 64%, 64.999%, 70% { opacity: 0.7; }
+    100% { opacity: 1; }
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.4; }
+}
 
-	19.999%, 22% {
-		opacity: 0.5;
-	}
-
-    62.999%, 64%, 64.999%, 70% {
-		opacity: 0.7;
-    }
-
-    100% {
-        opacity: 1;
-    }
-
-	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-		opacity: 0.4;
-	}
+span[class^="flicker"] {
+    animation-delay: 5s;
 }
 
 .flicker-slow{
-  animation: flicker 3s linear infinite;
+  animation: flicker 6s linear infinite;
+}
+
+.flicker{
+  animation: flicker 4s linear infinite;
 }
 
 .flicker-fast{
-  animation: flicker 1s linear infinite;
+  animation: flicker 2s linear infinite;
 }
 
 @keyframes flicker {
@@ -463,6 +470,10 @@ div.testimonials-section {
         letter-spacing: 1pt;
     }
 
+    h1.brand {
+        letter-spacing: 8px;
+    }
+
     .logo {
         grid-column: 4 / 9;
         grid-row: 3 / 12;
@@ -539,6 +550,10 @@ div.testimonials-section {
 
 @media screen and (min-width: 900px) {
 
+    h1.brand {
+        letter-spacing: 10px;
+    }
+
     div.project {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: center;
@@ -596,6 +611,7 @@ div.testimonials-section {
 
     h1.brand {
         grid-row: 1 / 4;
+        letter-spacing: 20px;
     }
 
     h2 {

@@ -15,9 +15,21 @@ ready(() => {
         navbar.classList.add('open');
     }
 
-    document.querySelector(':not(.open-navbar-btn)') .onclick = () => {
+    document.querySelector(':not(.open-navbar-btn)').onclick = () => {
         if (navbar.classList.contains('open')) {
             navbar.classList.remove('open');
         }
     }
+
+    document.querySelectorAll('.project-details-btn').forEach(el => {
+        el.onclick = (event) => {
+            const pId = event.target.closest('.project-details-btn').dataset.projectId;
+            document.querySelector(`#project-${pId}-modal`).showModal();
+        }
+    });
+    document.querySelectorAll('.close-modal-btn').forEach(el => {
+        el.onclick = (event) => {
+            event.target.closest('.project-modal').close();
+        }
+    });
 });

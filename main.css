@@ -449,64 +449,6 @@ div.project > * {
     margin: 30px auto 0;
 }
 
-div.testimonials-section {
-    margin-top: calc(2 * var(--section-gap-mobile));
-}
-
-.testimonial {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: repeat(8, minmax(0, 1fr));
-    max-width: 730px;
-    margin: auto;
-}
-
-.testimonial .content {
-    grid-column: 2 / 13;
-    grid-row: 3 / 9;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: var(--background-light-color);
-    border-radius: 10px;
-    padding: 20px;
-    padding-left: 43%;
-}
-
-.testimonial img {
-    grid-column: 1 / 6;
-    grid-row: 1 / 8;
-    width: 100%;
-    border-radius: 10px;
-    position: relative;
-}
-
-.testimonial .content .quote {
-    color: var(--accent-color);
-    font-size: 36px;
-    position: absolute;
-    top: -22px;
-    left: 40%;
-}
-
-.testimonial p {
-    margin: 5px 0;
-}
-
-.testimonial .testimonial-text {
-    letter-spacing: 1px;
-    margin-bottom: auto;
-}
-
-.testimonial-name {
-    color: var(--accent-color);
-}
-
-.testimonial-role {
-    color: var(--dark-text-color);
-    font-size: 11px;
-}
-
 div.contact-us-section {
     text-align: center;
     margin-top: calc(2 * var(--section-gap-mobile));
@@ -586,29 +528,6 @@ div.footer-section {
 
     .team-stats {
         grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .testimonial {
-        margin-top: calc(2 * var(--section-gap-desktop));
-    }
-
-    .testimonial .content {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .testimonial-text {
-        font-size: 20px;
-        letter-spacing: 2px;
-    }
-
-    .testimonial-name {
-        font-size: 18px;
-    }
-
-    .testimonial-role {
-        color: var(--dark-text-color);
-        font-size: 11px;
     }
 
     div.contact-us-section {

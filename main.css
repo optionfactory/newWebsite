@@ -293,33 +293,6 @@ li.contacts .material-symbols-outlined {
     font-size: 12vw;
 }
 
-.team-stats {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 30px;
-    row-gap: 30px;
-}
-
-.team-stats .stat {
-    text-align: center;
-    aspect-ratio: 1;
-    width: 100%;
-    max-width: 150px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.team-stats .stat p {
-    margin: 0 auto;
-}
-
-.team-stats .stat p:last-child {
-    margin-top: 10px;
-    font-size: 15px;
-}
-
 div.project {
     display: grid;
 }
@@ -526,10 +499,6 @@ div.footer-section {
         font-size: 12px;
     }
 
-    .team-stats {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
     div.contact-us-section {
         margin-top: calc(2 * var(--section-gap-desktop));
     }
@@ -688,18 +657,7 @@ div.footer-section {
     .services p.clients {
         font-size: 16px;
     }
-
-    .team-section h3 {
-        margin-bottom: 40px;
-    }
-
-    .team-stats .stat p:first-child {
-        font-size: 19px;
-    }
-
-    .team-stats .stat p:last-child {
-        font-size: 17px;
-    }
+    
 
     div.project {
         column-gap: 50px;

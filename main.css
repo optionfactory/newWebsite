@@ -188,32 +188,6 @@ h1.brand {
 	20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.4; }
 }
 
-span[class^="flicker"] {
-    animation-delay: 5s;
-}
-
-.flicker-slow{
-  animation: flicker 6s linear infinite;
-}
-
-.flicker{
-  animation: flicker 4s linear infinite;
-}
-
-.flicker-fast{
-  animation: flicker 2s linear infinite;
-}
-
-@keyframes flicker {
-	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-		opacity: 1;
-	}
-
-	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-		opacity: 0.4;
-	}
-}
-
 p.intro {
     color: var(--dark-text-color);
     font-size: 15px;

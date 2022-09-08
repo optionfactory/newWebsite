@@ -29,7 +29,12 @@ ready(() => {
     });
     document.querySelectorAll('.close-modal-btn').forEach(el => {
         el.onclick = (event) => {
-            event.target.closest('.project-modal').close();
+            const modal = event.target.closest('.project-modal');
+            modal.setAttribute('closing', '');
+            modal.addEventListener('animationend', () => {
+                modal.close();
+                modal.removeAttribute('closing');
+            }, {once: true});
         }
     });
 });

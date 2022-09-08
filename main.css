@@ -459,9 +459,52 @@ div.project > * {
     box-shadow: 0 0 1em var(--background-color);
 }
 
+.project-modal[open] {
+    animation: 
+        slide-up 500ms forwards,
+        fade-in 500ms forwards;
+}
+.project-modal[open]::backdrop {
+    animation: backdrop-fade-in 500ms forwards;
+}
+
+.project-modal[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: fade-out 500ms forwards;
+}
+.project-modal[closing]::backdrop {
+    animation: backdrop-fade-out 500ms forwards;
+}
+
 .project-modal::backdrop {
     background: linear-gradient(25deg, #081c2e, #ffb731);
     opacity: .15;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes backdrop-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: .15; }
+}
+
+@keyframes fade-out {
+    100% { opacity: 0; }
+    0% { opacity: 1; }
+}
+
+@keyframes backdrop-fade-out {
+    100% { opacity: 0; }
+    0% { opacity: .15; }
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0%); }
 }
 
 .close-modal-btn {
